@@ -1,0 +1,71 @@
+{
+  "type": "object",
+  "properties": {
+    "RequestNumber": { "type": "string" },
+    "SequenceNumber": { "type": "integer" },
+    "RequestType": { "type": "string" },
+    "RequestAction": { "type": "string" },
+    "DateTimes": {
+      "type": "object",
+      "properties": {
+        "ResponseDueDateTime": { "type": "string", "pattern": "^(\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}:\\d{2})$" }
+      },
+      "required": ["ResponseDueDateTime"]
+    },
+    "ServiceArea": {
+      "type": "object",
+      "properties": {
+        "PrimaryServiceAreaCode": {
+          "type": "object",
+          "properties": {
+            "SACode": { "type": "string" }
+          },
+          "required": ["SACode"]
+        },
+        "AdditionalServiceAreaCodes": {
+          "type": "object",
+          "properties": {
+            "SACode": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "required": ["SACode"]
+        }
+      },
+      "required": ["PrimaryServiceAreaCode", "AdditionalServiceAreaCodes"]
+    },
+    "ExcavationInfo": {
+      "type": "object",
+      "properties": {
+        "DigsiteInfo": {
+          "type": "object",
+          "properties": {
+            "WellKnownText": { "type": "string" }
+          },
+          "required": ["WellKnownText"]
+        }
+      },
+      "required": ["DigsiteInfo"]
+    },
+    "Excavator": {
+      "type": "object",
+      "properties": {
+        "CompanyName": { "type": "string" },
+        "Address": { "type": "string" },
+        "CrewOnsite": { "type": "boolean" }
+      },
+      "required": ["CompanyName", "Address", "CrewOnsite"]
+    }
+  },
+  "required": [
+    "RequestNumber",
+    "SequenceNumber",
+    "RequestType",
+    "RequestAction",
+    "DateTimes",
+    "ServiceArea",
+    "ExcavationInfo",
+    "Excavator"
+  ]
+}

@@ -1,0 +1,57 @@
+<h1>Ticket Details</h1>
+
+<p>
+  <strong>Request Number:</strong>
+  <%= @ticket.request_number %>
+</p>
+
+<p>
+  <strong>Sequence Number:</strong>
+  <%= @ticket.sequence_number %>
+</p>
+
+<p>
+  <strong>Request Type:</strong>
+  <%= @ticket.request_type %>
+</p>
+
+<p>
+  <strong>Request Action:</strong>
+  <%= @ticket.request_action %>
+</p>
+
+<p>
+  <strong>Date Times:</strong>
+  <%= @ticket.date_times %>
+</p>
+
+<p>
+  <strong>Service Area:</strong>
+  <%= @ticket.service_area %>
+</p>
+
+<p>
+  <strong>Digsite Info:</strong>
+  <%= @ticket.digsite_info['DigsiteInfo'] %>
+</p>
+
+<h2>Excavator Details</h2>
+
+<p>
+  <strong>Company Name:</strong>
+  <%= @excavator.company_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @excavator.address %>
+</p>
+
+<p>
+  <strong>Crew On Site:</strong>
+  <%= @excavator.crew_on_site %>
+</p>
+
+<div id="map" style="width: 100%; height: 400px;"></div>
+
+<input type="hidden" id="wkt-input" value='<%= @ticket.digsite_info["DigsiteInfo"].html_safe %>'>
