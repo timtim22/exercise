@@ -1,7 +1,7 @@
 databases:
-  - name: mysite
-    databaseName: mysite
-    user: mysite
+  - name: dpg-chiel13hp8u7g292v3h0-a
+    databaseName: exercise_production
+    user: exercise_production_user
 
 services:
   - type: web
