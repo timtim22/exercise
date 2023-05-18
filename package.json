@@ -2,7 +2,7 @@
   "dependencies": {
     "@rails/webpacker": "5.4.4",
     "leaflet": "^1.9.3",
-    "webpack": "^4.46.0",
+    "webpack": "^5.83.1",
     "webpack-cli": "^3.3.12",
     "wicket": "^1.3.8"
   },
