@@ -77,6 +77,6 @@ end
 
 gem 'pry'
 gem 'json-schema'
-gem 'webpacker'
+gem 'webpacker', '~> 4.0'
 gem 'leaflet-rails'
 gem 'sass-rails'
